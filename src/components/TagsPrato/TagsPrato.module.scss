@@ -1,47 +1,11 @@
 @import 'styles/variaveis';
 @import 'styles/breakpoints';
-.voltar {
-  background-color: transparent;
-  border: none;
-  color: $red;
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.titulo {
-  font-size: 3rem;
-}
-.imagem {
-  width: 600px;
-  img {
-    border-radius: 8px;
-    width: 100%;
-  }
-}
-.conteudo {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  &__descricao {
-    color: $darkest-grey;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  &____detalhes {
-    display: flex;
-    justify-content: space-between;
-  }
-}
+
 $massas: #d73b3b;
 $carnes: #30201e;
 $combos: #e6c864;
 $veganos: #80aa40;
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -54,9 +18,10 @@ $veganos: #80aa40;
   @media (max-width: $mobile) {
     justify-content: flex-start;
   }
-  div {
+  > div {
     margin: 10px;
   }
+
   &__tipo {
     align-items: center;
     border-radius: 2px;
@@ -65,6 +30,20 @@ $veganos: #80aa40;
     height: 40px;
     justify-content: center;
     padding: 10px 30px;
+    &__massas {
+      background-color: $massas;
+      color: white;
+    }
+    &__carnes {
+      background-color: $carnes;
+      color: white;
+    }
+    &__combos {
+      background-color: $combos;
+    }
+    &__veganos {
+      background-color: $veganos;
+    }
   }
   &__porcao,
   &__qtdpessoas,

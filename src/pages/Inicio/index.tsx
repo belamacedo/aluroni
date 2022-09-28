@@ -1,3 +1,4 @@
+import Menu from 'components/Menu';
 import cardapio from 'data/cardapio.json';
 import { Key } from 'react';
 import styles from './Inicio.module.scss';
@@ -9,6 +10,7 @@ export default function Inicio() {
     .splice(0, 3);
   return (
     <section>
+      <Menu />
       <h3 className={styles.titulo}>Recomendações da cozinha</h3>
       <div className={styles.recomendados}>
         {pratosRecomendados.map(

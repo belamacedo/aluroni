@@ -2,6 +2,7 @@ import cardapio from 'data/cardapio.json';
 import { Key } from 'react';
 import styles from './Inicio.module.scss';
 import stylesTema from 'styles/Tema.module.scss';
+import { useNavigate } from 'react-router-dom';
 import nossaCasa from '../../assets/nossa_casa.png';
 
 export default function Inicio() {
@@ -9,6 +10,12 @@ export default function Inicio() {
   pratosRecomendados = pratosRecomendados
     .sort(() => 0.5 - Math.random())
     .splice(0, 3);
+
+  const navigate = useNavigate();
+
+  function redirecionarParaDetalhes(prato: typeof cardapio[0]) {
+    navigate('/prato/${prato.id}', { state: { ...prato }, replace: true });
+  }
 
   return (
     <section>
@@ -23,7 +30,12 @@ export default function Inicio() {
                 alt={item.title}
               />
             </div>
-            <button className={styles.recomendado__botao}>Ver mais</button>
+            <button
+              className={styles.recomendado__botao}
+              onClick={() => redirecionarParaDetalhes(item)}
+            >
+              Ver mais
+            </button>
           </div>
         ))}
       </div>

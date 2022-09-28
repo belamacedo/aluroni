@@ -16,18 +16,23 @@ export default function Inicio() {
       <div className={styles.recomendados}>
         {pratosRecomendados.map((item) => (
           <div key={item.id} className={styles.recomendado}>
-            <div className={styles.recomendado__imagem}>
-              <img src={item.photo} alt={item.title} />
+            <div>
+              <img
+                style={{ borderRadius: '8px' }}
+                src={item.photo}
+                alt={item.title}
+              />
             </div>
             <button className={styles.recomendado__botao}>Ver mais</button>
           </div>
         ))}
-        <h3 className={stylesTema.titulo}> Nossa casa </h3>
-        <div className={styles.nossaCasa}>
-          <img src={nossaCasa} alt='Casa do aluroni' />
-          <div className={styles.nossaCasa__endereco}>
-            Rua Vergueiro, 3185 <br /> <br /> Vila Mariana - SP
-          </div>
+      </div>
+      <h3 className={stylesTema.titulo}>Nossa casa</h3>
+      <div className={styles.nossaCasa}>
+        <img src={nossaCasa} alt='Casa do aluroni' />
+        <div className={styles.nossaCasa__endereco}>
+          Rua Vergueiro, 3185 <br />
+          <br /> Vila Mariana -SP
         </div>
       </div>
     </section>

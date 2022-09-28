@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactComponent as Logo } from 'assets/logo.svg';
 import styles from './Menu.module.scss';
 import { Link } from 'react-router-dom';

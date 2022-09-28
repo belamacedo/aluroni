@@ -1,4 +1,6 @@
-import cardapio from './itens.json';
+/* eslint-disable indent */
+import React from 'react';
+import cardapio from 'data/cardapio.json';
 import Item from './Item';
 import styles from './Itens.module.scss';
 import { useEffect, useState } from 'react';
